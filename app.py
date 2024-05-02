@@ -1,34 +1,3 @@
-"""
-【總目標】
-透過 streamlit 建立查詢天氣的網頁，並透過 render 部署服務（部署部分再看看）
---------
-參考：
-https://tw.piliapp.com/emoji/list/weather/ [--emoji--]
-https://hackmd.io/@davidho9713/streamlit_data_visualization_basic
-https://medium.com/starbugs/render-來試試用來取代-heroku-的服務吧-render-的網路服務部署介紹-b728e86d5716
---------
-紀錄：
-2023.10.14：基本上 streamlit 的概念很簡單，程式碼的上下順序就是網頁呈現的上下順序。
-2023.10.15：透過 switch_page 額外模組解決 streamlit 登入登出頁面跳轉問題。
-2023.10.17：透過 st_pages 額外套件解決 streamlit 檔名與 sidebar 標題顯示對應的問題。
-========
-
-| streamlit - multipage app - login page |
---------
-目標：實作一個輸入帳密登入的頁面
---------
-參考：
-https://www.redhat.com/zh/topics/automation/what-is-yaml
-https://blog.streamlit.io/streamlit-authenticator-part-1-adding-an-authentication-component-to-your-app/
-https://github.com/mkhorasani/Streamlit-Authenticator?ref=blog.streamlit.io
-https://medium.com/@HUSAM_007/streamlit-authentication-bf6385a71e78
-https://www.hwchiu.com/docs/2023/python-yaml
-https://github.com/bharath5673/streamlit-multipage-authentication/tree/main [--前人作品--]
---------
-紀錄：
-config.yaml 跟 app.py 要在同一層，其他頁都應該放在 /pages 底下。
-"""
-
 ### 載入套件
 import time
 from datetime import datetime
@@ -47,10 +16,6 @@ show_pages(
         Page("pages/settings.py", "設定", "⚙️"),
     ]
 )
-
-### hash 密碼
-# hashed_passwords = stauth.Hasher(["jackloginweather!!"]).generate()
-# hashed_passwords
 
 ### 載入儲存使用者驗證資訊的 yaml 檔案
 yaml = YAML()
