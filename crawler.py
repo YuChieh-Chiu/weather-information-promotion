@@ -1,10 +1,3 @@
-"""
-目標：以三種不同方式爬取天氣資訊（Selenium, BeautifulSoup, API）
---------
-紀錄：
-2023.10.10 - API 只能看到縣市層級，不符合需求，暫時跳過
-"""
-
 ### 載入套件
 # 處理時間
 import time
@@ -21,7 +14,7 @@ from selenium.webdriver.common.by import By
 import requests
 from bs4 import BeautifulSoup
 
-### 爬取各種天氣資訊（先以天氣、溫度跟降雨機率為主）
+### 爬取天氣資訊（以天氣、溫度跟降雨機率為主）
 class get_weather_from_web:
     def __init__(self) -> None: # 開啟瀏覽器
         tomorrow = datetime.now() + timedelta(1)
@@ -138,37 +131,3 @@ class get_weather_from_web:
             "precipitation": precipitation
         }
         return cwa_forecast
-    def get_api_weather(self,
-                        search_criteria: json) -> None: # 取得 WeatherAPI.com 天氣資訊（API）
-        # 金鑰
-        api_key = "23d66083ebfc4857acf155616230910"
-        # 查詢縣市鄉鎮
-        search_criteria = json.loads(search_criteria) # json 形式的 str 轉 dict
-        town = search_criteria["town"]
-        city = search_criteria["city"]
-        # 要預測未來幾天
-        days = 1
-        # 是否需要回傳空氣品質
-        aqi = "no"
-        # 是否需要天氣預警
-        alerts = "no"
-        api_url =\
-            f"https://api.weatherapi.com/v1/forecast.json?key={api_key}&q={city} {town}&days={days}&aqi={aqi}&alerts={alerts}"
-        res = requests.get(api_url)
-        print(res.text)
-        # [TODO] 補齊後面資料
-        # [WARNING] 這個 api 只能看到縣市層級 不能看到鄉鎮
-
-        
-
-# ### 執行程式碼
-
-# # 假設從前端接到的資料是 json 形式的 str
-# search_criteria = json.dumps({
-#     "town": "大安區",
-#     "city": "臺北市"
-# })
-
-# crawler = get_weather_from_web()
-# crawler.get_msn_weather(search_criteria=search_criteria)
-# crawler.get_cwa_weather(search_criteria=search_criteria)
