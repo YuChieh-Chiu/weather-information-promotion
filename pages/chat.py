@@ -1,22 +1,3 @@
-"""
-| streamlit - multipage app - page1_chat |
---------
-目標：實做一個供聊天的介面
---------
-紀錄：
-2023.11.20 - 之後可以嘗試只保留動詞、形容詞、名詞再 embedding
-2023.11.20 - 完成，但查不準，待確認原因
---------
-參考：
-https://zhuanlan.zhihu.com/p/46016518
-https://python.langchain.com/docs/use_cases/question_answering/
-https://python.langchain.com/docs/integrations/vectorstores/chroma
-https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2
-https://clusteredbytes.pages.dev/posts/2023/langchain-parent-document-retriever/
-vector embeddings : 1. feature engineering 2. neural network
-chroma : 專門用來存 embedding 結果的向量資料庫
-"""
-
 ### 載入套件
 import os
 import sys
@@ -68,7 +49,7 @@ else:
     for message in st.session_state.messages:
         with st.chat_message(name=message["role"], avatar=message["avatar"]):
             st.markdown(message["content"], unsafe_allow_html=True)
-    ### 對話區（:= 為象牙運算子）
+    ### 對話區
     if prompt := st.chat_input("請輸入問題！"):
         st.session_state.messages.append({"role": "user", "avatar": "👨‍💻", "content": prompt})
         # 使用者提問
