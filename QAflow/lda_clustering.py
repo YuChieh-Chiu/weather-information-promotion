@@ -1,7 +1,3 @@
-### reference
-# https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
-# https://stackoverflow.com/questions/77438251/langchain-parentdocumetretriever-save-and-load
-
 ### import package
 import re
 import os
@@ -89,5 +85,3 @@ class lda_clustering:
         query_predict_df = pd.DataFrame(query_matrix, columns=columns)
         query_topic = query_predict_df.idxmax(axis=1)[0] # 取每列的最大值
         return query_topic
-
-    
