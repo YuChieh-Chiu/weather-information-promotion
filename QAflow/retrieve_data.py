@@ -1,7 +1,3 @@
-### reference
-# https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
-# https://stackoverflow.com/questions/77438251/langchain-parentdocumetretriever-save-and-load
-
 ### import package
 import os
 from random import randint
@@ -21,25 +17,6 @@ def retrieve_data(query: str,
                 data_dir: str,
                 child_chunk_size: int,
                 child_chunk_overlap: int) -> str: # 搜尋相似文件並回傳
-    """
-    `vectorstores` are used to store embeddings. 
-    And as we’re only embedding the smaller chunks 
-    (as they capture better semantic meaning after embedding them),
-    we use vectorstore to only store the smaller chunks, not the larger ones.
-    -----
-    For the larger ones tho, we use `InMemoryStore`. 
-    It’s like a dictionary type `KEY-VALUE` pair data structure, 
-    that stays in the memory while the program is running.
-    -----
-    In the `InMemoryStore`,
-    Each key is a unique uuid for each large chunk
-    Each value is the actual text content of the corresponding large chunk
-    -----
-    In the `vectorstore`,
-    For each embedding of the smaller chunks, 
-    we store that unique uuid of the parent large chunk as a metadata. 
-    This large chunk is from where this small chunk is originated.
-    """
     # chroma_dir + topic
     chroma_dir = f"{chroma_dir}/{topic}"
     # data_dir
