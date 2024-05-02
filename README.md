@@ -7,16 +7,16 @@
 <img width="400" src="./readme_source/login_page.png">
 
 ### - Homepage
-<img width="400" src="./readme_source/homepage_page.gif">
+<img width="400" src="./readme_source/homepage_page.png">
 
 ### - Weather Related Quizzes
-<img width="400" src="./readme_source/recognize_page.gif">
+<img width="400" src="./readme_source/qa_page.gif">
 
 ### - Weather Information Search
-<img width="400" src="./readme_source/dashboard_page.png">
+<img width="400" src="./readme_source/search_page.gif">
 
 ### - Settings
-<img width="400" src="./readme_source/dashboard_page.png">
+<img width="400" src="./readme_source/settings_page.png">
 
 ## Project Overview
 > [!IMPORTANT]
