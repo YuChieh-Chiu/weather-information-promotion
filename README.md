@@ -7,7 +7,7 @@
 <img width="400" src="./readme_source/login_page.png">
 
 ### - Homepage
-<img width="400" src="./readme_source/homepage_page.png">
+<img width="400" src="./readme_source/homepage.png">
 
 ### - Weather Related Quizzes
 <img width="400" src="./readme_source/qa_page.gif">
