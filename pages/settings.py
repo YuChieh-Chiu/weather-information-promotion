@@ -1,12 +1,3 @@
-"""
-| streamlit - multipage app - page3_setting |
---------
-目標：實作一個供設定查詢天氣資訊所需參數的頁面
---------
-紀錄：
-
-"""
-
 ### 載入套件
 import json
 import streamlit as st
@@ -32,7 +23,7 @@ else:
                         "temperature": False, 
                         "precipitation": False
                     }
-    ### 設定 tabs (後面的 tab 可以吃到前面 tab 的 variables)
+    ### 設定 tabs
     tab1, tab2, tab3 = st.tabs(["🔗來源選擇", "🪧呈現資訊", "👁‍🗨設定預覽"])
     with tab1:
         st.header("請選擇獲取天氣資訊的來源網站")
