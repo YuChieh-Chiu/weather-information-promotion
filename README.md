@@ -1,6 +1,6 @@
 # WEATHER INFORMATION PROMOTION
 
-> ![cmd-svg](./readme_source/terminal-fill.svg) `Streamlit` + ![gear-svg](./readme_source/gear-wide-connected.svg) `Crawler(Requests/Selenium)` + ![gear-svg](./readme_source/gear-wide-connected.svg) `Model(LDA/Embedding)` + ![gear-svg](./readme_source/gear-wide-connected.svg) `Database(MongoDB/Chroma)` = ![window-svg](./readme_source/window-fullscreen.svg) `Weather Information Promotion Website`
+> ![streamlit-svg](./readme_source/terminal.svg) `Streamlit` + ![crawler-svg](./readme_source/bug.svg) `Crawler(Requests/Selenium)` + ![models-svg](./readme_source/code-slash.svg) `Model(LDA/Embedding)` + ![database-svg](./readme_source/database-fill.svg) `Database(MongoDB/Chroma)` = ![website-svg](./readme_source/window-sidebar.svg) `Weather Information Promotion Website`
 
 ## Website Display
 ### - Login
