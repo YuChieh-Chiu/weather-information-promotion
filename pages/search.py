@@ -1,12 +1,3 @@
-"""
-| streamlit - multipage app - page2_search |
---------
-目標：實作一個供查詢天氣資訊的頁面
---------
-紀錄：
-
-"""
-
 ### 載入套件
 import re
 import json
@@ -38,7 +29,6 @@ else:
         tomorrow = tomorrow.strftime("%Y/%m/%d")
         st.markdown(f"<br>您選擇的行政區為：<span style='color:navy;font-weight:bold'>{city_town}</span>，明日（{tomorrow}）天氣資訊如下。",
                 unsafe_allow_html=True)
-        # crawl -> store -> show weather data
         ### 開啟設定檔
         with open("user_setting.json") as f:
             user_settings = json.load(f)
