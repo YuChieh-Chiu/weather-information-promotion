@@ -1,7 +1,3 @@
-### reference
-# https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
-# https://stackoverflow.com/questions/77438251/langchain-parentdocumetretriever-save-and-load
-
 ### import package
 import re
 import pdfplumber
