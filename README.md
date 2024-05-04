@@ -37,7 +37,7 @@ The website will then promptly crawl the corresponding webpage for tommorrow wea
 > [!IMPORTANT]
 > This project aims to showcase some of the skills I have mastered. Here's a brief overview of these skills, including `Data Crawling`, `Database Connecting`, and `Models Building`.
 
-> **Data Crawling**: In this project, I utilized both **static web scraping** (using `requests` + `BeautifulSoup`) and **dynamic web scraping** (using `Selenium`) techniques to fetch weather information from the Central Weather Administration and the SMS website.
+> **Data Crawling**: In this project, I utilized both **static web scraping** (using `requests` + `BeautifulSoup`) and **dynamic web scraping** (using `Selenium`) techniques to fetch weather information from the Central Weather Administration and the MSN website.
 
 > **Database Connecting**: In this project, I employed `MongoDB`, a **NoSQL database** to store the information obtained from web scraping. Additionally, I utilized `Chroma` as a **vector database** to store the vectorized data behind the weather knowledge question-and-answer pairs.
 
