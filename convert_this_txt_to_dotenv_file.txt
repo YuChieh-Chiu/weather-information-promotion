@@ -1,0 +1,15 @@
+### 下列是這個專案當中可以調整的一些參數項目，在本地端運行時可將檔名改成 `.env` 並修改以下參數即可執行 ###
+### （這個檔案雖然是 .env 檔案，但並不包含任何機敏資訊，僅作為方便統一修改參數的檔案） ###
+# 建索引資料夾
+indexing_folder="氣象百問"
+# 詞嵌入模型名稱
+model_name="jinaai/jina-embeddings-v2-base-zh"
+# chroma 資料夾
+chroma_dir="db"
+# data 資料夾
+data_dir="data"
+# embeddings 切 chunk 參數
+child_chunk_size="child_chunk_size_integer_you_want"
+child_chunk_overlap="child_chunk_overlap_integer_you_want"
+# lda 主題數
+n_topics="lda_topics_number_you_want"
