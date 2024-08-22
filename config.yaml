@@ -2,7 +2,7 @@ credentials:
   usernames:
     admin:
       name: demo_user
-      password: $2b$12$ayMiJNk0r1vBS0IKZbXimeJ8Vbd4WLnZKgutFYHNwUIAzWYlTQVAG
+      password: password_after_hashing
       first_time: false
 cookie:
   expiry_days: 0
