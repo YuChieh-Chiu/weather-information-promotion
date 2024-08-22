@@ -2,11 +2,11 @@
 import os
 from random import randint
 from langchain.docstore.document import Document
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.retrievers import ParentDocumentRetriever
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.storage import LocalFileStore # ByteStore
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.storage._lc_store import create_kv_docstore # docstore
 
 ### build index
@@ -22,7 +22,10 @@ def build_index(topic,
     # data_dir
     data_dir = f"{data_dir}/{topic}"
     # 要用的詞嵌入模型
-    embeddings = HuggingFaceEmbeddings(model_name=model_name)
+    embeddings = HuggingFaceEmbeddings(
+        model_name=model_name,
+        model_kwargs={"trust_remote_code":True} # prevent model from parameters being initialized
+    )
     # 將 str 轉 doc
     docs = []
     for _, qa in enumerate(all_qa_list):
